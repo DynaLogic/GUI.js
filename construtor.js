@@ -1,5 +1,5 @@
-GUI.GuiScene = function() {
-this.camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, -500, 1000);
+GUI.guiScene = function() {
+	this.camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, -500, 1000);
 	this.scene = new THREE.Scene();
 	this.scene.add(this.camera);
 	this.camera.position.z = 50;
@@ -15,8 +15,7 @@ this.camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerW
 	this.addTextElement = function(text, x, y, opts) {
 		
 		if(typeof opts === "undefined") opts = {};
-		if(typeof opts.z === "undefined"'
-		}) opts.z = 0;
+		if(typeof opts.z === "undefined") opts.z = 0;
 		if(typeof opts.textColor === "undefined") opts.textColor = "#000";
 		
 		var canvas = document.createElement('canvas'),
@@ -44,6 +43,6 @@ this.camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerW
 		//scene.add(sprite);
 		sprite.position.y += 1.5;
 		sprite.textWidth = textWidth;
-		return sprite;'
-		}
+		return sprite;
+	}
 }
